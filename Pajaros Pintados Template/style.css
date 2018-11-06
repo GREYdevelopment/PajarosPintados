@@ -1,0 +1,311 @@
+/*
+Theme Name: Pájaros Pintados
+Theme URI: hhttps://turismo.gub.uy/pajarospintados/
+Description: Pájaros Pintados Oficial
+Version: 1.0
+Author: GREY Uruguay
+Author URI: http://grey.com/uruguay
+*/
+
+
+/* --- --- */
+
+html {
+    margin-top: 0px !important;
+    font-weight: normal !important
+}
+
+body{
+    margin: 0px !important;
+    padding:0px !important;
+}
+
+
+/* -- N A V I G A T I O N -- */
+
+.content-icon-menu{
+  position: fixed;
+  right: 4vw;
+  display: table;
+  top: 0.6vw;
+  z-index: 999999999;
+  transform: scale(0.9,0.9);
+}
+
+.menu-text{
+  font-size: 0.7vw;
+  letter-spacing: 0.2vw;
+  color: rgba(255, 255, 255, 0.71);
+  position: relative;
+  /* float: right; */
+  left: -40px;
+  margin: 0px;
+  top: 17px;
+  font-family: 'Raleway', sans-serif;
+}
+
+#nav-icon1, #nav-icon2, #nav-icon3, #nav-icon4 {
+width: 46px;
+list-style:none;
+    padding: 4%;
+    height: 40px;
+    padding: 0px;
+    clear: both;
+    float: right;
+    right: 1vw;
+    margin: 0.8% 1%;
+    opacity:0.8;
+position:initial;
+z-index:99999999;
+  -webkit-transform: rotate(0deg), scale(1,1);
+  -moz-transform: rotate(0deg), scale(1,1);
+  -o-transform: rotate(0deg), scale(1,1);
+  transform: rotate(0deg), scale(1,1);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+   z-index: 9999999999999999;
+
+}
+
+#nav-icon1 span, #nav-icon3 span, #nav-icon4 span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 49%;
+  background: white;
+  border-radius: 1px;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  margin: 0 auto;
+  text-align: center;
+  margin-left: 25%;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+.open span{
+  background: white !important;
+}
+
+#nav-icon3 span:nth-child(1) {
+top: 13px;
+}
+
+#nav-icon3 span:nth-child(2),#nav-icon3 span:nth-child(3) {
+top: 20px;
+}
+
+#nav-icon3 span:nth-child(4) {
+top: 27px;
+}
+
+#nav-icon3.open span:nth-child(1) {
+top: 13px;
+width: 0%;
+left: 50%;
+}
+
+#nav-icon3.open span:nth-child(2) {
+-webkit-transform: rotate(45deg);
+-moz-transform: rotate(45deg);
+-o-transform: rotate(45deg);
+transform: rotate(45deg);
+}
+
+#nav-icon3.open span:nth-child(3) {
+-webkit-transform: rotate(-45deg);
+-moz-transform: rotate(-45deg);
+-o-transform: rotate(-45deg);
+transform: rotate(-45deg);
+}
+
+#nav-icon3.open span:nth-child(4) {
+top: 27px;
+width: 0%;
+left: 50%;
+}
+
+.content-header-general{
+  background: linear-gradient(to bottom, rgba(8, 19, 31, 0.63) 0%, rgba(204,204,204,0) 68%, rgba(255,255,255,0) 100%);
+  width: 100%;
+  height: 8vw;
+  z-index: 999999;
+  position: fixed;
+  transition: all ease-out 0.3s;
+}
+
+.content-logo-header img{
+  position: absolute;
+  height: 3.5vw;
+  left: 6vw;
+  top: 1.3vw;
+
+  transition: all ease-out 0.3s;
+  -webkit-transition: all ease-out 0.3s;
+  -moz-transition: all ease-out 0.3s;
+  -ms-transition: all ease-out 0.3s;
+}
+
+.header-move{
+  background: #1d65a8fa !important;
+  height: 4.2vw;
+  box-shadow: 0px -14px 20px 20px #00000029;
+  border-bottom: 2px solid #caa958;
+}
+
+.logo-move{
+  height: 2.8vw !important;
+  top: 0.6vw !important;
+}
+
+.menu-animation{
+  right: 0px !important;
+    /*  box-shadow: 0px 0px 27px 6px rgba(0, 0, 0, 0.2) !important;*/
+}
+
+.content-menu-desplegable{
+right: -26vw;
+    position: fixed;
+    z-index: 9999;
+    top: 0px;
+    margin: 0px;
+    width: 25vw;
+    z-index: 9999999;
+    height: 100vh;
+    opacity: 0.93;
+
+  -webkit-transition: all 1000ms cubic-bezier(0.375, 0.455, 0.165, 1.000);
+ -moz-transition: all 1000ms cubic-bezier(0.375, 0.455, 0.165, 1.000);
+   -o-transition: all 1000ms cubic-bezier(0.375, 0.455, 0.165, 1.000);
+      transition: all 1000ms cubic-bezier(0.375, 0.455, 0.165, 1.000); /* custom */
+
+-webkit-transition-timing-function: cubic-bezier(0.375, 0.455, 0.165, 1.000);
+ -moz-transition-timing-function: cubic-bezier(0.375, 0.455, 0.165, 1.000);
+   -o-transition-timing-function: cubic-bezier(0.375, 0.455, 0.165, 1.000);
+      transition-timing-function: cubic-bezier(0.375, 0.455, 0.165, 1.000); /* custom */
+
+background: -moz-linear-gradient(#e7b333 0%, #ae302c 100%);
+background: -webkit-linear-gradient(#e7b333 0%, #ae302c 100%);
+background: -o-linear-gradient(#e7b333 0%, #ae302c 100%);
+background: -ms-linear-gradient(#e7b333 0%, #ae302c 100%);
+background: linear-gradient(#e7b333 0%, #ae302c 100%);
+
+}
+
+.content-menu-desplegable ul{
+  padding: 1.5vw 3.2vw;
+  width: auto;
+  height: auto;
+}
+
+.content-menu-center{
+  margin: 12vh 0px;
+}
+
+.menu-bg{
+background: none !important;
+}
+
+.content-menu-desplegable ul li{
+font-family: 'Raleway', sans-serif;
+  font-size: 0.8vw;
+  color: white;
+  letter-spacing: 0.1vw;
+  border-bottom: 1px solid rgba(94, 152, 196, 0.62);
+  line-height: 3.5vw;
+  padding-left: 1vw;
+  cursor: pointer;
+  display: block;
+
+-webkit-transition: all 400ms cubic-bezier(0.375, 0.455, 0.165, 1.000);
+-moz-transition: all 400ms cubic-bezier(0.375, 0.455, 0.165, 1.000);
+-o-transition: all 400ms cubic-bezier(0.375, 0.455, 0.165, 1.000);
+transition: all 400ms cubic-bezier(0.375, 0.455, 0.165, 1.000); /* custom */
+}
+
+.content-menu-desplegable ul li a{
+font-family: 'Raleway', sans-serif;
+font-size:0.8vw;
+color:white;
+letter-spacing:0.1vw;
+
+-webkit-transition: all 400ms cubic-bezier(0.375, 0.455, 0.165, 1.000);
+-moz-transition: all 400ms cubic-bezier(0.375, 0.455, 0.165, 1.000);
+-o-transition: all 400ms cubic-bezier(0.375, 0.455, 0.165, 1.000);
+transition: all 400ms cubic-bezier(0.375, 0.455, 0.165, 1.000); /* custom */
+}
+
+.content-menu-desplegable ul li a:hover{
+ text-decoration:  none;
+}
+
+.content-menu-desplegable ul li{
+  list-style: none;
+ position:relative
+}
+
+.content-menu-desplegable .caret{
+    color: #f9b73c !important;
+  position: absolute;
+  right: 0.8vw;
+  top: 1.5vw;
+}
+
+
+.content-list-desplegable{
+  background: rgba(255, 255, 255, 0.11);
+  padding: 0px 1vw;
+  display:none;
+border-radius: 0px 0px 7px 7px;
+}
+
+.content-list-desplegable li a{
+  font-size: 0.9vw !important;
+  letter-spacing: 0.04vw !important;
+}
+
+.content-list-desplegable li{
+   line-height: 2.5vw !important;
+}
+
+.content-search-icon{
+  cursor: pointer;
+  position: absolute;
+  height: 20px;
+  left: 49px;
+  top: 12px;
+  padding-left: 0.9vw;
+  border-left: 1px solid rgba(255, 255, 255, 0.61);
+}
+/* -- END Navigation -- */
+
+
+
+
+
+
+/* ------------ A J U S T E S   M O B I L E  -------------- */
+
+
+/* --- TABLET --- */
+@media screen and (max-width: 769px) and (min-width: 100px) {
+    
+
+}
+/* --- END tablet --- */
+
+
+
+
+/* ---------- END ajustes mobile ---------- */
