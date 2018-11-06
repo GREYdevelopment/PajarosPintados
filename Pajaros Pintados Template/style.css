@@ -171,6 +171,7 @@ left: 50%;
 
 .menu-animation{
   right: 0px !important;
+  background-position-x: -13% !important;
     /*  box-shadow: 0px 0px 27px 6px rgba(0, 0, 0, 0.2) !important;*/
 }
 
@@ -195,18 +196,35 @@ right: -26vw;
    -o-transition-timing-function: cubic-bezier(0.375, 0.455, 0.165, 1.000);
       transition-timing-function: cubic-bezier(0.375, 0.455, 0.165, 1.000); /* custom */
 
-background: -moz-linear-gradient(#e7b333 0%, #ae302c 100%);
+/*background: -moz-linear-gradient(#e7b333 0%, #ae302c 100%);
 background: -webkit-linear-gradient(#e7b333 0%, #ae302c 100%);
 background: -o-linear-gradient(#e7b333 0%, #ae302c 100%);
 background: -ms-linear-gradient(#e7b333 0%, #ae302c 100%);
-background: linear-gradient(#e7b333 0%, #ae302c 100%);
+background: linear-gradient(#e7b333 0%, #ae302c 100%);*/
 
+background: url(images/menu-background.svg)no-repeat center;
+background-size: 106%;
+background-position-x: 14vw;
 }
 
 .content-menu-desplegable ul{
   padding: 1.5vw 3.2vw;
   width: auto;
   height: auto;
+  margin-right: 0vw;
+  right: -9vw;
+  position: absolute;
+  opacity: 0;
+
+  transition:all ease-in-out 0.2s;
+  -moz-transition:all ease-in-out 0.2s;
+  -webkit-transition:all ease-in-out 0.2s;
+  -o-transition:all ease-in-out 0.2s;
+}
+
+.list-general-animation{
+  right: 0px !important;
+  opacity: 1 !important;
 }
 
 .content-menu-center{
@@ -262,12 +280,18 @@ transition: all 400ms cubic-bezier(0.375, 0.455, 0.165, 1.000); /* custom */
   top: 1.5vw;
 }
 
-
 .content-list-desplegable{
   background: rgba(255, 255, 255, 0.11);
   padding: 0px 1vw;
-  display:none;
-border-radius: 0px 0px 7px 7px;
+  display: block;
+  border-radius: 0px 0px 7px 7px;
+  height: 0px;
+  overflow: hidden;
+
+  -webkit-transition: all 400ms cubic-bezier(0.375, 0.455, 0.165, 1.000);
+-moz-transition: all 400ms cubic-bezier(0.375, 0.455, 0.165, 1.000);
+-o-transition: all 400ms cubic-bezier(0.375, 0.455, 0.165, 1.000);
+transition: all 400ms cubic-bezier(0.375, 0.455, 0.165, 1.000); /* custom */
 }
 
 .content-list-desplegable li a{
@@ -288,6 +312,15 @@ border-radius: 0px 0px 7px 7px;
   padding-left: 0.9vw;
   border-left: 1px solid rgba(255, 255, 255, 0.61);
 }
+
+.menu-animation-dropdown{
+  height: 17vw !important;
+}
+
+.menu-animation-dropdown-destinos{
+  height: 27vw !important;
+}
+
 /* -- END Navigation -- */
 
 
