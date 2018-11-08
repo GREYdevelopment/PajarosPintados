@@ -13,12 +13,15 @@
 
   <script src="<?php echo get_template_directory_uri(); ?>/js/general-animations.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/js/bootstrap.min.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.parallax-scroll.js"></script>
   <!-- End Jquery -->
 
   <!-- Llamado Estilos -->
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
   <link href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.min.css" rel="stylesheet">
   <!-- End estilos -->
+
+  <link href="https://fonts.googleapis.com/css?family=Signika:300,400,700" rel="stylesheet">
 
 
    <?php wp_head(); ?>
@@ -27,7 +30,9 @@
    <script>
     $(document).ready(function(){
 
-$('#nav-icon3').click(function(){
+    scrollheader();
+
+    $('#nav-icon3').click(function(){
     $('#nav-icon3').toggleClass('open');
     $('#nav-icon3').toggleClass('menu-bg');
     $('.content-menu-desplegable').toggleClass( 'menu-animation');
@@ -54,9 +59,21 @@ $('.button-dropdown-destinos').click(function(){
     $('.lista-actividades').removeClass( 'menu-animation-dropdown');
 });
 
-
-
 });
+
+   function scrollheader(){
+      $(window).scroll(function(){
+      if ($(window).scrollTop() > 0){
+          $('.content-menu-general').addClass( "header-move" );
+          $('.content-menu-general img').addClass( "logo-move" );
+      }
+      if ($(window).scrollTop() < ($( window ).height())-300 ){
+          $('.content-menu-general').removeClass( "header-move" );
+          $('.content-menu-general img').removeClass( "logo-move" );
+      }
+    })};
+
+
    </script>
 
  </head>
@@ -68,7 +85,7 @@ $('.button-dropdown-destinos').click(function(){
 <nav class="content-menu-general">
 
   <a href="/home" class="content-logo-general">
-    <img src="<?php echo get_template_directory_uri(); ?>/images/logo-general.png" alt="Pájaros Pintados">
+    <img src="<?php echo get_template_directory_uri(); ?>/images/logo-general-pajaros.png" alt="Pájaros Pintados">
   </a>
 
     
@@ -81,7 +98,7 @@ $('.button-dropdown-destinos').click(function(){
             <span></span>
         </li>
         <div class="content-search-icon">
-             <img src="<?php echo get_template_directory_uri(); ?>/images/search-button.png" />
+             <img src="<?php echo get_template_directory_uri(); ?>/images/search-icon.svg" />
         </div>
    </div>
 
@@ -115,6 +132,8 @@ $('.button-dropdown-destinos').click(function(){
             <li><a target="_parent" href="/">Pueblos con encanto</a></li>
             <li><a target="_parent" href="/">Sabores</a></li>
         </div>
+
+        <li class="item-menu-one"><a href="">INSTITUCIONAL</a></li>
 
       </ul>
   </div>
