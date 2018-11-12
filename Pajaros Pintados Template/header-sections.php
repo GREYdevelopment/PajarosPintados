@@ -34,8 +34,6 @@
    <script>
     $(document).ready(function(){
 
-    scrollheader();
-
     $('#nav-icon3').click(function(){
     $('#nav-icon3').toggleClass('open');
     $('#nav-icon3').toggleClass('menu-bg');
@@ -76,28 +74,6 @@ $('.button-dropdown-destinos').click(function(){
 });
 
 });
-
-   function scrollheader(){
-      $(window).scroll(function(){
-      if ($(window).scrollTop() > 0){
-          $('.content-menu-general').addClass( "header-move" );
-          $('.content-menu-general').addClass( "menu-colors" );
-          $('.content-logo-general').addClass("logo-desapear");
-          $('.content-logo-slim').addClass("logo-appear");
-          $('.search-white').addClass("logo-desapear");
-          $('.search-blue').addClass("logo-appear");
-      }
-      if ($(window).scrollTop() < ($( window ).height())-300 ){
-          $('.content-menu-general').removeClass( "header-move" );
-          $('.content-menu-general').removeClass( "menu-colors" );
-          $('.content-logo-general').removeClass("logo-desapear");
-          $('.content-logo-slim').removeClass("logo-appear");
-          $('.search-white').addClass("logo-appear");
-          $('.search-blue').removeClass("logo-appear");
-      }
-    })};
-
-
    </script>
 
  </head>
@@ -106,13 +82,13 @@ $('.button-dropdown-destinos').click(function(){
 
 
 <!--  H E A D E R -->
-<nav class="content-menu-general">
+<nav class="content-menu-general header-move menu-colors">
 
-  <a href="/home" class="content-logo-general">
+  <a href="/home" class="content-logo-general logo-desapear">
     <img src="<?php echo get_template_directory_uri(); ?>/images/logo-general-pajaros.png" alt="Pájaros Pintados">
   </a>
 
-    <a href="/home" class="content-logo-slim">
+    <a href="/home" class="content-logo-slim logo-appear">
     <img src="<?php echo get_template_directory_uri(); ?>/images/logo-slim.svg" alt="Pájaros Pintados">
   </a>
 
@@ -126,8 +102,8 @@ $('.button-dropdown-destinos').click(function(){
             <span></span>
         </li>
         <div class="content-search-icon">
-             <img class="search-white" src="<?php echo get_template_directory_uri(); ?>/images/search-icon.svg" />
-             <img class="search-blue" src="<?php echo get_template_directory_uri(); ?>/images/search-icon-blue.svg" />
+             <img class="search-white logo-desapear" src="<?php echo get_template_directory_uri(); ?>/images/search-icon.svg" />
+             <img class="search-blue logo-appear" src="<?php echo get_template_directory_uri(); ?>/images/search-icon-blue.svg" />
         </div>
         <div class="search-content">
           <div class="content-search-close"> <img src="<?php echo get_template_directory_uri(); ?>/images/exit-search.svg" /></div>
@@ -176,7 +152,3 @@ $('.button-dropdown-destinos').click(function(){
 </nav>
 
 <!--  END header -->
-
-
-
-

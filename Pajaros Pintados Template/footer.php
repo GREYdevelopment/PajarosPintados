@@ -1,4 +1,4 @@
-<footer class="content-footer">
+<footer class="content-footer" >
 	<div class="footer-text">
 		<img src="<?php echo get_template_directory_uri(); ?>/images/logo-uruguaynatural-footer.svg" alt="Uruguay Natural">
 		<p>
